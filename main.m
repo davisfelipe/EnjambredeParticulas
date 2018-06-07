@@ -30,9 +30,10 @@ gbest3=px3(valIndMax);
 
 while iteracion<=maxIteracion
    teta=tetaMax-((tetaMax-tetaMin)/(maxIteracion))*iteracion;
-   vx1=vx1*teta+c*(pbest1-px1)+c*(gbest1-px1);
-   vx2=vx2*teta+c*(pbest2-px2)+c*(gbest1-px2);
-   vx3=vx3*teta+c*(pbest3-px3)+c*(gbest1-px3);
+   r1=rand();r2=rand();
+   vx1=vx1*teta+c*r1*(pbest1-px1)+c*r2*(gbest1-px1);
+   vx2=vx2*teta+c*r1*(pbest2-px2)+c*r2*(gbest1-px2);
+   vx3=vx3*teta+c*r1*(pbest3-px3)+c*r2*(gbest1-px3);
    
    px1=px1+vx1;
    px2=px2+vx2;
